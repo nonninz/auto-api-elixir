@@ -1,2 +1,4 @@
 steps:
- - docker build .
+ - docker build -t antani .
+ - docker run antani 'mix test'
+

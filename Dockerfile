@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Can this be a very crude caching mechanism?
 VOLUME /app/_build
+VOLUME /app/deps
 
 # This step installs all the build tools we'll need
 #RUN apk add --update libressl-dev nodejs npm git build-base
@@ -24,13 +25,13 @@ RUN mix do deps.get, deps.compile
 RUN mix compile
 
 # test
-RUN mix test
+#RUN mix test
 
 # credo
-RUN mix credo
+#RUN mix credo
 
 # formatter
-RUN mix format --check-formatted
+#RUN mix format --check-formatted
 
 # dialyzer
-RUN mix dialyzer
+#RUN mix dialyzer
