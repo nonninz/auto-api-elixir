@@ -4,6 +4,9 @@ FROM elixir:alpine
 RUN mkdir /app
 WORKDIR /app
 
+# Can this be a very crude caching mechanism?
+VOLUME /app/_build
+
 # This step installs all the build tools we'll need
 #RUN apk add --update libressl-dev nodejs npm git build-base
 RUN apk add --update git
