@@ -1,4 +1,4 @@
-FROM elixir
+FROM elixir:latest-alpine
 
 # prepare build dir
 RUN mkdir /app
