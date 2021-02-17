@@ -27,7 +27,7 @@ RUN mix test
 RUN mix credo
 
 # formatter
-RUN mix formatter
+RUN mix format --check-formatted
 
 # dialyzer
 RUN mix dialyzer
