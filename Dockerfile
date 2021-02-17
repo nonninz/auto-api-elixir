@@ -1,7 +1,7 @@
 FROM elixir:alpine
 
 # prepare build dir
-RUN mkdir /app
+RUN mkdir /app /app/_build /app/deps
 WORKDIR /app
 
 # Can this be a very crude caching mechanism?
